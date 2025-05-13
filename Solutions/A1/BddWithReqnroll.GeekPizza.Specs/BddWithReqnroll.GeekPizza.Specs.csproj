@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- test project dependencies (MsTest) -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.8.3" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.8.3" />
+
+    <!-- Reqnroll -->
+    <PackageReference Include="Reqnroll.MsTest" Version="2.4.1" />
+
+    <!-- testing utilities -->
+    <PackageReference Include="AwesomeAssertions" Version="8.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Support\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="**\.gitkeep" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BddWithReqnroll.GeekPizza.Web\BddWithReqnroll.GeekPizza.Web.csproj" />
+  </ItemGroup>
+
+</Project>
